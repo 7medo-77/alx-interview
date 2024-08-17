@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module which prints all the status code frequencies and file size
+"""
 import re
 import sys
 import signal
