@@ -23,7 +23,7 @@ for curr_line in sys.stdin:
     if match:
         line_file_size = int(match.group(3))
         file_size += line_file_size
-        line_code = int(match.group(2))
+        line_code = match.group(2)
         if line_code in status_dict.keys():
             status_dict[line_code] += 1
         else:
