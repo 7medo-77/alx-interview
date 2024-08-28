@@ -11,6 +11,8 @@ def validUTF8(data):
     for index, number in enumerate(data):
         binary_mask = 0b10000000
         one_count = 0
+        if len(bin(number)) - 2 > 8:
+            return False
 
         while binary_mask != 0:
             binary_mask &= number
@@ -30,10 +32,14 @@ def validUTF8(data):
                 return False
             elif one_count == 1:
                 if len(important_bytes) > 0:
-                    if index not in range(important_bytes[-1][0], important_bytes[-1][1] + 1):
+                    if index not in range(
+                        important_bytes[-1][0],
+                        important_bytes[-1][1] + 1):
                         return False
             elif one_count == 0:
                 if len(important_bytes) > 0:
-                    if index in range(important_bytes[-1][0], important_bytes[-1][0] + 1):
+                    if index in range(
+                          important_bytes[-1][0],
+                          important_bytes[-1][0] + 1):
                         return False
     return True

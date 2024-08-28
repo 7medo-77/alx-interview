@@ -24,3 +24,8 @@ data =  [250, 145, 145, 145, 145]
 print(validUTF8(data))
 print('*'* 50)
 print(ans_validUTF8(data))
+
+data =  [345, 467]
+print(validUTF8(data))
+print('*'* 50)
+print(ans_validUTF8(data))
