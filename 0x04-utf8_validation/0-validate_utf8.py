@@ -24,10 +24,12 @@ def validUTF8(data):
             if len(important_bytes) > 0:
                 if index in range(
                     important_bytes[-1][0],
-                    important_bytes[-1][1] + 1):
+                    important_bytes[-1][1] + 1
+                ):
                     return False
             important_bytes.append((index, index + one_count - 1))
-            if len(data[index:]) < important_bytes[-1][1] - important_bytes[-1][0] + 1:
+            if len(data[index:]) < \
+                    important_bytes[-1][1] - important_bytes[-1][0] + 1:
                 return False
         else:
             if one_count > 4:
@@ -35,8 +37,8 @@ def validUTF8(data):
             elif one_count == 1:
                 if len(important_bytes) > 0:
                     if index not in range(
-                        important_bytes[-1][0],
-                        important_bytes[-1][1] + 1):
+                            important_bytes[-1][0],
+                            important_bytes[-1][1] + 1):
                         return False
             elif one_count == 0:
                 if len(important_bytes) > 0:
