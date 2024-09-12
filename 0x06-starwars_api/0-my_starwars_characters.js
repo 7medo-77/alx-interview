@@ -12,8 +12,6 @@ async function enumerateCharactersByOrder (arrayOfLinks) {
   }
 }
 
-// let charArray;
-
 request(url, (error, response, body) => {
   if (!error) {
     const result = JSON.parse(body);
