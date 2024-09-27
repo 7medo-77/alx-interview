@@ -3,10 +3,9 @@
 Module defining a function which provides
 a solution to the island_perimeter problem
 """
-from typing import List
 
 
-def island_perimeter(grid: List[List[int]]):
+def island_perimeter(grid):
     """
     Function which provides
     a solution to the island_perimeter problem
