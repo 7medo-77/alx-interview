@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Module defining a function which provides
 a solution to the island_perimeter problem
