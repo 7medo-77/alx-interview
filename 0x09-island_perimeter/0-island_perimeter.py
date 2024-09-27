@@ -5,6 +5,7 @@ a solution to the island_perimeter problem
 """
 from typing import List
 
+
 def island_perimeter(grid: List[List[int]]):
     """
     Function which provides
